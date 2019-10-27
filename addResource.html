@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Resource</title>
+  <link rel="stylesheet" href="css/profileStyle.css">
+  <link rel="stylesheet" href="css/addResouceStyle.css">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <input data-function="swipe" id="swipe" type="checkbox">
+  <label data-function="swipe" for="swipe">&#xf057;</label>
+  <label data-function="swipe" for="swipe">&#xf0c9;</label>
+
+  <div class="headings">
+    <h1>ADD RESOURCES INFORMATION</h1>
+    
+	<div class="container">
+	  <form>
+
+		<label for="yourId"><h2>Your ID</h2></label>
+		<input type="text" id="id" name="yourId" placeholder="12345">
+
+		<label for="yourName"><h2>Your Name</h2></label>
+		<input type="text" id="fname" name="yourName" placeholder="Sameer Khowaja">
+
+		<label for="section"><h2>Section</h2></label>
+		<select id="section" name="section">
+		  <option value="a">A</option>
+		  <option value="b">B</option>
+		  <option value="c">C</option>
+		</select>
+
+		<label for="subject"><h2>Write Something for Guideline</h2></label>
+		<textarea id="guide" name="guide" placeholder="Write something.." style="height:200px"></textarea>
+
+		
+		
+		<!--Attachments-->
+		<h2>Attachments</h2>
+		<input type="text" id="attachment" name="attachment" placeholder="...">
+		<button class="btn btn-secondary" type="button"><span>Add File</span></button>
+		<br/>
+		<input type="submit" value="Submit">
+
+	  </form>
+	</div>
+  
+  </div>
+
+
+  <div class="sidebar">
+    <nav class="menu">
+      <div class="menu">
+        <div class="menu">
+
+          <li class="item" id='profile'>
+            <a href="profile.html" class="btn"></i>Profile</a>
+            <div class="smenu">
+              <a href="#">View</a>
+              <a href="#">Edit</a>
+            </div>
+          </li>
+
+          <li class="item" id="messages">
+              <a href="#messages" class="btn"></i>Announcement</a>
+              <div class="smenu">
+                <a href="#">View Test</a>
+                <a href="#">View Homework</a>
+              </div>
+          </li>
+
+          <li class="item" id="grade">
+            <a href="#grade" class="btn"></i>Grades</a>
+            <div class="smenu">
+                <a href="#">View Grade</a>
+            </div>
+          </li>
+
+          <li class="item" id="resources">
+            <a href="#resources" class="btn"></i>Resources</a>
+              <div class="smenu">
+				<a href="#">ADD Resources</a>
+                <a href="#">My Resource</a>
+				<a href="#">All Resource</a>
+                <a href="#">Respond to Resource</a>
+              </div>
+          </li>
+
+          <li class="item">
+            <a class="btn" href="Login-Registration.html"></i>Logout</a>
+          </li>
+
+      </div>
+    </nav>
+  </div>
+  
+</div>
+
+
+  
+</body>
+</html>
