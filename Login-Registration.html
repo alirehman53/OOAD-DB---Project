@@ -100,15 +100,15 @@
                                     <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
                                 </p>
 								<p> 
-                                    <label for="usernamesignup" class="uname" >Your Guardian/Parent Name</label>
+                                    <label id="guardiannamesignupSub" for="usernamesignup" class="uname" >Your Guardian/Parent Name</label>
                                     <input id="guardiannamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperguardian096" />
                                 </p>
 								<p> 
-									<label for="usernamesignup" class="uname" >Your CNIC Number</label>
+									<label id="nicsignupSub" for="usernamesignup" class="uname" >Your CNIC Number</label>
 									<input id="nicsignup" name="usernamesignup" required="required" type="text" placeholder="4130329364551" />
 								</p>
 								<p> 
-									<label for="usernamesignup" class="uname" >Your Guardian/Parent CNIC Number</label>
+									<label id="guardiannicsignupSub" for="usernamesignup" class="uname" >Your Guardian/Parent CNIC Number</label>
 									<input id="guardiannicsignup" name="usernamesignup" required="required" type="text" placeholder="4130394837712" />
 								</p>
 								<p> 
@@ -120,7 +120,7 @@
 									<input id="phonesignup" name="usernamesignup" required="required" type="text" placeholder="03332211340" />
 								</p>
 								<p> 
-                                    <label for="usernamesignup" class="uname" >Your Guardian/Parent Phone Number</label>
+                                    <label id="guardianphonesignupSub" for="usernamesignup" class="uname" >Your Guardian/Parent Phone Number</label>
                                     <input id="guardianphonesignup" name="usernamesignup" required="required" type="text" placeholder="03133822890" />
                                 </p>
 								<p> 
@@ -132,11 +132,11 @@
                                     <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
                                 </p>
                                 <p> 
-                                    <label for="emailsignup" class="youmail" > Your Guardian/Parent email</label>
+                                    <label id="guardianemailsignupSub" for="emailsignup" class="youmail" > Your Guardian/Parent email</label>
                                     <input id="guardianemailsignup" name="emailsignup" required="required" type="email" placeholder="mysuperguardianmail@mail.com"/> 
                                 </p>
 								<p> 
-									<label for="usernamesignup" class="uname" >Your Qualification</label>
+									<label id="qualificationsignupSub" for="usernamesignup" class="uname" >Your Qualification</label>
 									<input id="qualificationsignup" name="usernamesignup" required="required" type="text" placeholder="master, phd, etc" />
 								</p>
                                 <p> 
@@ -155,27 +155,40 @@
 								<script type="text/javascript">
 									function checkOption(obj) {
 										var input1 = document.getElementById("guardiannamesignup");
+										var input11 = document.getElementById("guardiannamesignupSub");
 										var input2 = document.getElementById("guardiannicsignup");
+										var input22 = document.getElementById("guardiannicsignupSub");
 										var input3 = document.getElementById("guardianphonesignup");
+										var input33 = document.getElementById("guardianphonesignupSub");
 										var input4 = document.getElementById("guardianemailsignup");
+										var input44 = document.getElementById("guardianemailsignupSub");
 										var input5 = document.getElementById("qualificationsignup");
+										var input55 = document.getElementById("qualificationsignupSub");
 										var input6 = document.getElementById("nicsignup");
+										var input66 = document.getElementById("nicsignupSub");
 										//input1.disabled = input2.disabled = input3.disabled = input4.disabled = input5.disabled = obj.value == "guardian";
 										
 										if(obj.value == "null"){
-											input1.disabled = input2.disabled = input3.disabled = input4.disabled = input5.disabled = input6.disabled = false;
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = input5.hidden = input6.hidden = false;
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = input55.hidden = input66.hidden = false;
 										}
 										if(obj.value == "guardian"){
-											input1.disabled = input2.disabled = input3.disabled = input4.disabled = input5.disabled = obj.value == "guardian";
-											input6.disabled = false;
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = input5.hidden = obj.value == "guardian";
+											input6.hidden = false;
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = input55.hidden = obj.value == "guardian";
+											input66.hidden = false;
 										}
 										if(obj.value == "teacher"){
-											input1.disabled = input2.disabled = input3.disabled = input4.disabled = obj.value == "teacher";
-											input5.disabled = input6.disabled = false;
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = obj.value == "teacher";
+											input5.hidden = input6.hidden = false;
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = obj.value == "teacher";
+											input55.hidden = input66.hidden = false;
 										}
 										if(obj.value == "student"){
-											input1.disabled = input2.disabled = input3.disabled = input4.disabled = input5.disabled = input6.disabled = false;
-											input6.disabled = input5.disabled = obj.value == "student";
+											input1.hidden = input2.hidden = input3.hidden = input4.hidden = input5.hidden = input6.hidden = false;
+											input6.hidden = input5.hidden = obj.value == "student";
+											input11.hidden = input22.hidden = input33.hidden = input44.hidden = input55.hidden = input66.hidden = false;
+											input66.hidden = input55.hidden = obj.value == "student";
 										}
 									}
 								</script>
