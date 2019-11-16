@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>REMOVE Resource</title>
+  <title>ADD Announcement</title>
   <link rel="stylesheet" href="css/profileStyle.css">
   <link rel="stylesheet" href="css/addResouceStyle.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
@@ -17,59 +17,58 @@
   <label data-function="swipe" for="swipe">&#xf0c9;</label>
 
   <div class="headings">
-    <h1>REMOVE RESOURCES INFORMATION</h1>
+    <h1>ADD ANNOUNCEMENT INFORMATION</h1>
     
 	<div class="container">
 	  <form>
+	  
+		<label for="title"><h2>Due Date</h2></label>
+		<input id="duedate" required="required" type="date" name="duedate"><br/><br/>
 
-		<label for="title"><h2>ID</h2></label>
-		<input type="text" id="id" name="title" placeholder="Hello World">
+		<label for="title"><h2>Grade ID</h2></label>
+		<input type="text" id="Gradeid" name="title" placeholder="1234">
+		
+		<label for="title"><h2>Section ID</h2></label>
+		<input type="text" id="Secid" name="title" placeholder="A">
+		
+		<label for="title"><h2>Subject ID</h2></label>
+		<input type="text" id="Subid" name="title" placeholder="ABC">
+		
+		<label for="title"><h2>Teacher ID</h2></label>
+		<input type="text" id="Teacherid" name="title" placeholder="56132">
+		
+		<label for="title"><h2>Title</h2></label>
+		<input type="text" id="Tid" name="title" placeholder="Hello World">
+		
+		<label for="description"><h2>Description</h2></label>
+		<textarea id="description" name="description" placeholder="Write some description.." style="height:200px"></textarea>
+
+		<label for="title"><h2>Section</h2></label>
+		<input type="text" id="Section" name="title" placeholder="A">
+
+		<label for="grade"><h2>Grade</h2></label>
+		<select id="grade" name="grade">
+		  <option value="a">A</option>
+		  <option value="b">B</option>
+		  <option value="c">C</option>
+		</select>
+		
+		<label for="subject"><h2>Subject</h2></label>
+		<input type="text" id="subject" name="subject" placeholder="Maths">
+		
+		<label for="Suggestion"><h2>Suggestion</h2></label>
+		<input type="text" id="suggestion" name="Suggestion" placeholder="Good to do work">
+		
+		<!--Attachments-->
+		<label for="subject"><h2>Add Attachments</h2></label>
+		<button id="addFile" class="btn btn-secondary" type="button"><span>Add File</span></button>
+		<br/>
 		
 		<input id="submitResourse" type="submit" value="Submit">
 
 	  </form>
 	</div>
  </div>
-  
-  
- <!-- Scrip for select menu -->
- <script type="text/javascript">
-	function check(obj) {
-		var input2 = document.getElementById("addAttachment");
-		var input3 = document.getElementById("addFile");
-		var input4 = document.getElementById("addURL");
-
-		if(obj.value == "attach"){
-			input2.style.visibility = "visible"; 
-			input3.style.visibility = "visible"
-			input4.style.visibility = "hidden";
-		}
-		
-		if(obj.value == "url"){
-			input2.style.visibility = "visible"; 
-			input3.style.visibility = "hidden"
-			input4.style.visibility = "visible";
-		}	
-		
-		if(obj.value == "null"){
-			input2.style.visibility = "hidden"; 
-			input3.style.visibility = "hidden"
-			input4.style.visibility = "hidden";
-		}
-	}
-	
-	
-	function myFunction() {
-		var input2 = document.getElementById("addAttachment");
-		var input3 = document.getElementById("addFile");
-		var input4 = document.getElementById("addURL");
-		
-		input2.style.visibility = "hidden"; 
-		input3.style.visibility = "hidden"
-		input4.style.visibility = "hidden";
-	}
-
-</script>
 
 
   <div class="sidebar">
@@ -84,7 +83,7 @@
           <li class="item" id="messages">
               <a href="#messages" class="btn"></i>Announcement</a>
               <div class="smenu">
-                <a href="addAnnouncement.html">Add Announcement</a>
+                <a href="#">Add Announcement</a>
                 <a href="myAnnouncement.html">My Announcement</a>
               </div>
           </li>
@@ -100,7 +99,7 @@
             <a href="#resources" class="btn"></i>Resources</a>
               <div class="smenu">
 				<a href="addResource.html">ADD Resources</a>
-                <a href="#">REMOVE Resource</a>
+                <a href="removeResource.html">REMOVE Resource</a>
 				<a href="updateResource.html">UPDATE Resource</a>
               </div>
           </li>

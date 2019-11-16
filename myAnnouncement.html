@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>REMOVE Resource</title>
+  <title>MY Announcement</title>
   <link rel="stylesheet" href="css/profileStyle.css">
   <link rel="stylesheet" href="css/addResouceStyle.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
@@ -17,59 +17,19 @@
   <label data-function="swipe" for="swipe">&#xf0c9;</label>
 
   <div class="headings">
-    <h1>REMOVE RESOURCES INFORMATION</h1>
+    <h1>MY ANNOUNCEMENT INFORMATION</h1>
     
 	<div class="container">
 	  <form>
-
+	  
 		<label for="title"><h2>ID</h2></label>
-		<input type="text" id="id" name="title" placeholder="Hello World">
+		<input type="text" id="Announcementid" name="title" placeholder="1234">
 		
 		<input id="submitResourse" type="submit" value="Submit">
 
 	  </form>
 	</div>
  </div>
-  
-  
- <!-- Scrip for select menu -->
- <script type="text/javascript">
-	function check(obj) {
-		var input2 = document.getElementById("addAttachment");
-		var input3 = document.getElementById("addFile");
-		var input4 = document.getElementById("addURL");
-
-		if(obj.value == "attach"){
-			input2.style.visibility = "visible"; 
-			input3.style.visibility = "visible"
-			input4.style.visibility = "hidden";
-		}
-		
-		if(obj.value == "url"){
-			input2.style.visibility = "visible"; 
-			input3.style.visibility = "hidden"
-			input4.style.visibility = "visible";
-		}	
-		
-		if(obj.value == "null"){
-			input2.style.visibility = "hidden"; 
-			input3.style.visibility = "hidden"
-			input4.style.visibility = "hidden";
-		}
-	}
-	
-	
-	function myFunction() {
-		var input2 = document.getElementById("addAttachment");
-		var input3 = document.getElementById("addFile");
-		var input4 = document.getElementById("addURL");
-		
-		input2.style.visibility = "hidden"; 
-		input3.style.visibility = "hidden"
-		input4.style.visibility = "hidden";
-	}
-
-</script>
 
 
   <div class="sidebar">
@@ -85,7 +45,7 @@
               <a href="#messages" class="btn"></i>Announcement</a>
               <div class="smenu">
                 <a href="addAnnouncement.html">Add Announcement</a>
-                <a href="myAnnouncement.html">My Announcement</a>
+                <a href="#">My Announcement</a>
               </div>
           </li>
 
@@ -100,7 +60,7 @@
             <a href="#resources" class="btn"></i>Resources</a>
               <div class="smenu">
 				<a href="addResource.html">ADD Resources</a>
-                <a href="#">REMOVE Resource</a>
+                <a href="removeResource.html">REMOVE Resource</a>
 				<a href="updateResource.html">UPDATE Resource</a>
               </div>
           </li>
