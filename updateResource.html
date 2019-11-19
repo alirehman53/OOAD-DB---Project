@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="css/addResouceStyle.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
-<body onload="myFunction()">
+<body data-title="updateResource" onload="myFunction()">
 <div class="container">
   <input data-function="swipe" id="swipe" type="checkbox">
   <label data-function="swipe" for="swipe">&#xf057;</label>
@@ -26,7 +27,7 @@
 		<input type="text" id="id" name="title" placeholder="Hello World">
 		
 		<label for="title"><h2>Title</h2></label>
-		<input type="text" id="id" name="title" placeholder="Hello World">
+		<input type="text" id="tite_id" name="title" placeholder="Hello World">
 		
 		<label for="description"><h2>Description</h2></label>
 		<textarea id="description" name="description" placeholder="Write some description.." style="height:200px"></textarea>
@@ -58,6 +59,7 @@
 		
 		<input type="text" id="addAttachment" name="attachment" placeholder="...">
 		<button id="addFile" class="btn btn-secondary" type="button"><span>Add File</span></button>
+		<button id="addURL" class="btn btn-secondary" type="button"><span>Add URL</span></button>
 		<br/>
 		
 		<label for="time"><h2>Choose Time</h2></label>
@@ -82,19 +84,19 @@
 
 		if(obj.value == "attach"){
 			input2.style.visibility = "visible"; 
-			input3.style.visibility = "visible"
+			input3.style.visibility = "visible";
 			input4.style.visibility = "hidden";
 		}
 		
 		if(obj.value == "url"){
 			input2.style.visibility = "visible"; 
-			input3.style.visibility = "hidden"
+			input3.style.visibility = "hidden";
 			input4.style.visibility = "visible";
 		}	
 		
 		if(obj.value == "null"){
 			input2.style.visibility = "hidden"; 
-			input3.style.visibility = "hidden"
+			input3.style.visibility = "hidden";
 			input4.style.visibility = "hidden";
 		}
 	}
@@ -164,6 +166,8 @@
   
 </div>
 
+  
+  <script src ="api.js"></script>
   
 </body>
 </html>
