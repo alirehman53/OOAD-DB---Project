@@ -9,9 +9,18 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <style>
+  
+   th, td {
+  border: 1px solid black;
+}
+  
+  </style>
+  
+  
 </head>
 <body data-title="myAnnouncement">
-
 <div class="container">
   <input data-function="swipe" id="swipe" type="checkbox">
   <label data-function="swipe" for="swipe">&#xf057;</label>
@@ -27,19 +36,21 @@
 		<input type="text" id="Announcementid" name="title" placeholder="1234">
 		
 		<input id="submitResourse" type="submit" value="Submit">
+		
+		
+		<table style="width:100%" id="main">
+  
+  
+        </table>
+	  
 
 	  </form>
 	  
-<table style="width:100%" id="main">
-  
-  
-</table>
-	  
+
 	  
 
 	  
 	  
-
 	</div>
  </div>
 
@@ -95,8 +106,6 @@
   
 </div>
 
-
   <script src ="api.js"></script>
-
 </body>
 </html>
