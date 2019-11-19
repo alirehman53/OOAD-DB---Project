@@ -2,15 +2,16 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Resource</title>
+  <title>ADD Resource</title>
   <link rel="stylesheet" href="css/profileStyle.css">
   <link rel="stylesheet" href="css/addResouceStyle.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
-<body onload="myFunction()">
+<body data-title="addResourc" onload="myFunction()">
 <div class="container">
   <input data-function="swipe" id="swipe" type="checkbox">
   <label data-function="swipe" for="swipe">&#xf057;</label>
@@ -23,7 +24,7 @@
 	  <form>
 
 		<label for="title"><h2>Title</h2></label>
-		<input type="text" id="tite_id" name="title" placeholder="Hello World">
+		<input type="text" id="tite_id" name="title" placeholder="Hello World"/>
 		
 		<label for="description"><h2>Description</h2></label>
 		<textarea id="description" name="description" placeholder="Write some description.." style="height:200px"></textarea>
@@ -36,13 +37,13 @@
 		</select>
 		
 		<label for="subject"><h2>Subject</h2></label>
-		<input type="text" id="subject" name="subject" placeholder="Maths">
+		<input type="text" id="subject" name="subject" placeholder="Maths"/>
 		
 		<label for="teacher_id"><h2>Teacher Id</h2></label>
-		<input type="text" id="teacher_id" name="teacher_id" placeholder="1234">
+		<input type="text" id="teacher_id" name="teacher_id" placeholder="1234"/>
 
 		<label for="author"><h2>Author</h2></label>
-		<input type="text" id="author" name="author" placeholder="Albert">
+		<input type="text" id="author" name="author" placeholder="Albert"/>
 		
 		<!--Attachments-->
 		<h2>Select your Category for Attachment</h2>
@@ -53,11 +54,13 @@
 			</select>
 		<span class="bar"></span>
 		
-		<input type="text" id="addAttachment" name="attachment" placeholder="...">
+		
+		<input type="text" id="addAttachment" name="attachment" placeholder="..."/>
 		<button id="addFile" class="btn btn-secondary" type="button"><span>Add File</span></button>
+		<button id="addURL" class="btn btn-secondary" type="button"><span>Add URL</span></button>
 		<br/>
 		
-		<input id="submitResourse" type="submit" value="Submit">
+		<input  id="submitResourse" type="submit" value="Submit"/>
 
 	  </form>
 	</div>
@@ -73,19 +76,19 @@
 
 		if(obj.value == "attach"){
 			input2.style.visibility = "visible"; 
-			input3.style.visibility = "visible"
+			input3.style.visibility = "visible";
 			input4.style.visibility = "hidden";
 		}
 		
 		if(obj.value == "url"){
 			input2.style.visibility = "visible"; 
-			input3.style.visibility = "hidden"
-			input4.style.visibility = "visible";
+			input3.style.visibility = "hidden";
+		     input4.style.visibility = "visible"; 
 		}	
 		
 		if(obj.value == "null"){
 			input2.style.visibility = "hidden"; 
-			input3.style.visibility = "hidden"
+			input3.style.visibility = "hidden";
 			input4.style.visibility = "hidden";
 		}
 	}
@@ -97,10 +100,9 @@
 		var input4 = document.getElementById("addURL");
 		
 		input2.style.visibility = "hidden"; 
-		input3.style.visibility = "hidden"
+		input3.style.visibility = "hidden";
 		input4.style.visibility = "hidden";
-	}
-
+ }
 </script>
 
 
@@ -111,17 +113,13 @@
 
           <li class="item" id='profile'>
             <a href="profile.html" class="btn"></i>Profile</a>
-            <div class="smenu">
-              <a href="#">View</a>
-              <a href="#">Edit</a>
-            </div>
           </li>
 
           <li class="item" id="messages">
               <a href="#messages" class="btn"></i>Announcement</a>
               <div class="smenu">
-                <a href="#">View Test</a>
-                <a href="#">View Homework</a>
+                <a href="addAnnouncement.html">Add Announcement</a>
+                <a href="myAnnouncement.html">My Announcement</a>
               </div>
           </li>
 
@@ -135,10 +133,17 @@
           <li class="item" id="resources">
             <a href="#resources" class="btn"></i>Resources</a>
               <div class="smenu">
-				<a href="addResource.html">ADD Resources</a>
+				<a href="#">ADD Resources</a>
                 <a href="removeResource.html">REMOVE Resource</a>
 				<a href="updateResource.html">UPDATE Resource</a>
-                <a href="#">Library</a>
+              </div>
+          </li>
+		  
+		  <li class="item" id="library">
+            <a href="#library" class="btn"></i>Library</a>
+              <div class="smenu">
+                <a href="myLibrary.html">My Library</a>
+				<a href="Library.html">Library</a>
               </div>
           </li>
 
@@ -152,6 +157,8 @@
   
 </div>
 
-  
+
+  <script src ="api.js"></script>
+
 </body>
 </html>

@@ -2,32 +2,50 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Profile</title>
+  <title>Library</title>
   <link rel="stylesheet" href="css/profileStyle.css">
+  <link rel="stylesheet" href="css/addResouceStyle.css">
   <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  
+  <style>
+  
+   th, td {
+  border: 1px solid black;
+}
+  
+  </style>
 </head>
-<body data-title="profile_page">
+<body data-title="Library">
 <div class="container">
   <input data-function="swipe" id="swipe" type="checkbox">
   <label data-function="swipe" for="swipe">&#xf057;</label>
   <label data-function="swipe" for="swipe">&#xf0c9;</label>
 
   <div class="headings">
-    <h1>PROFILE INFORMATION</h1>
-    <p>User Data<p>
-	
-	<div id="main">
-  
+    <h1>LIBRARY</h1>
+    
+	<div class="container">
+	  <form>
+	  
+		<label for="title"><h2>ID</h2></label>
+		<input type="text" id="id" name="title" placeholder="1234">
+		
+		<input id="submitResourse" type="submit" value="Submit">
 
+		
+		<table style="width:100%" id="main">
   
-  </div>
   
-	
-  </div>
+        </table>
+		
+	  </form>
+	</div>
+ </div>
+
 
   <div class="sidebar">
     <nav class="menu">
@@ -35,7 +53,7 @@
         <div class="menu">
 
           <li class="item" id='profile'>
-            <a  class="btn">Profile</a>
+            <a href="profile.html" class="btn"></i>Profile</a>
           </li>
 
           <li class="item" id="messages">
@@ -66,7 +84,7 @@
             <a href="#library" class="btn"></i>Library</a>
               <div class="smenu">
                 <a href="myLibrary.html">My Library</a>
-				<a href="Library.html">Library</a>
+				<a href="#">Library</a>
               </div>
           </li>
 
@@ -78,16 +96,8 @@
     </nav>
   </div>
   
-  
-   
-  
 </div>
 
-
-
-</div>
-  
+  <script src ="api.js"></script>
 </body>
-
-<script src ="api.js"></script>
 </html>
